@@ -8,7 +8,7 @@ namespace Calculator
     {
         public int Sum(int value1, int value2)
         {
-            throw new NotImplementedException();
+            return value1 + value2;
         }
     }
 }
