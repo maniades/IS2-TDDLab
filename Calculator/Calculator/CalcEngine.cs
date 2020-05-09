@@ -13,7 +13,7 @@ namespace Calculator
 
         public int Substract(int value1, int value2)
         {
-            throw new NotImplementedException();
+            return value1 - value2;
         }
 
         public void Multiplication()
