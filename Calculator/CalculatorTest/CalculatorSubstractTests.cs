@@ -24,10 +24,40 @@ namespace CalculatorTest
             int value2 = 2;
             int expectedResult = 3;
 
-            // For this act section, we can realise that we are going to obtain one int value from this operation, and will need to operands. This allows us to infere that this Substract method signature 
             // Act
-            int result = 0;
-            //result = engine.Substract();
+            int result = engine.Substract(value1, value2);
+
+            // Assert
+            Assert.AreEqual(result, expectedResult);
+        }
+
+        // We are doing some happy patch tests here
+        [Test]
+        public void SubstractTestOk2()
+        {
+            // Arrange
+            int value1 = 0;
+            int value2 = 5;
+            int expectedResult = -5;
+
+            // Act
+            int result = engine.Substract(value1, value2);
+
+            // Assert
+            Assert.AreEqual(result, expectedResult);
+        }
+
+        // We are doing some happy patch tests here
+        [Test]
+        public void SubstractTestOk3()
+        {
+            // Arrange
+            int value1 = -6;
+            int value2 = -3;
+            int expectedResult = -3;
+
+            // Act
+            int result = engine.Substract(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);

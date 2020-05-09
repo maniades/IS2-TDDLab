@@ -11,7 +11,7 @@ namespace Calculator
             return value1 + value2;
         }
 
-        public void Substract()
+        public int Substract(int value1, int value2)
         {
             throw new NotImplementedException();
         }
