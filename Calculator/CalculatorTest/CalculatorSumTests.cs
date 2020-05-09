@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace CalculatorTest
 {
     [TestFixture]
-    public class Tests
+    public class CalculatorSumTests
     {
         CalcEngine engine;
 
