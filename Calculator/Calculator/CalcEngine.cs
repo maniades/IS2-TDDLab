@@ -10,5 +10,25 @@ namespace Calculator
         {
             return value1 + value2;
         }
+
+        public void Substract()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Multiplication()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Division()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SquareRoot()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
