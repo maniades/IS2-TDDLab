@@ -23,6 +23,11 @@ namespace Calculator
 
         public double Division(int value1, int value2)
         {
+            if(value2 == 0)
+            {
+                throw new DivideByZeroException();
+            }
+
             return (double)value1 / (double)value2;
         }
 
