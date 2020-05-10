@@ -25,8 +25,7 @@ namespace CalculatorTest
             double expectedResult = 4;
 
             // Act
-            double result = 0;
-            //double result = engine.SquareRoot(value1);
+            double result = engine.SquareRoot(value1);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -41,8 +40,7 @@ namespace CalculatorTest
             double expectedResult = 8;
 
             // Act
-            double result = 0;
-            //double result = engine.SquareRoot(value1);
+            double result = engine.SquareRoot(value1);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -57,11 +55,10 @@ namespace CalculatorTest
             double expectedResult = 2.8284271247;
 
             // Act
-            double result = 0;
-            //double result = engine.SquareRoot(value1);
+            double result = engine.SquareRoot(value1);
 
             // Assert
-            Assert.AreEqual(result, expectedResult);
+            Assert.LessOrEqual(result - expectedResult, 0.000001);
         }
 
         // We are doing some happy patch tests here
@@ -69,12 +66,11 @@ namespace CalculatorTest
         public void SqrtTestOk4()
         {
             // Arrange
-            int value1 = -16;
-            double expectedResult = 3.5;
+            int value1 = 16;
+            double expectedResult = 4;
 
             // Act
-            double result = 0;
-            //double result = engine.SquareRoot(value1);
+            double result = engine.SquareRoot(value1);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -88,7 +84,7 @@ namespace CalculatorTest
             int value1 = -4;
 
             // Act & assert
-            Assert.Throws<Exception>(() => engine.SquareRoot());
+            Assert.Throws<Exception>(() => engine.SquareRoot(value1));
         }
     }
 }
