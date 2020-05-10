@@ -25,8 +25,7 @@ namespace CalculatorTest
             int expectedResult = 8;
 
             // Act
-            int result = 0;
-            //int result = engine.Multiplication(value1, value2);
+            int result = engine.Multiplication(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -42,8 +41,7 @@ namespace CalculatorTest
             int expectedResult = 0;
 
             // Act
-            int result = 0;
-            //int result = engine.Multiplication(value1, value2);
+            int result = engine.Multiplication(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -59,8 +57,7 @@ namespace CalculatorTest
             int expectedResult = -12;
 
             // Act
-            int result = 0;
-            //int result = engine.Multiplication(value1, value2);
+            int result = engine.Multiplication(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);

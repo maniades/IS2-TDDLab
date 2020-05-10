@@ -16,9 +16,9 @@ namespace Calculator
             return value1 - value2;
         }
 
-        public void Multiplication()
+        public int Multiplication(int value1, int value2)
         {
-            throw new NotImplementedException();
+            return value1 * value2;
         }
 
         public void Division()
