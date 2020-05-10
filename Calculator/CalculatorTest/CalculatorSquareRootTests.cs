@@ -8,6 +8,7 @@ namespace CalculatorTest
     public class CalculatorSquareRootTests
     {
         CalcEngine engine;
+        double precission = 0.00001;
 
         // This attribute allows this part of the test to be ran before each test takes place, initializing the class to test in this case
         [SetUp]
@@ -28,7 +29,7 @@ namespace CalculatorTest
             double result = engine.SquareRoot(value1);
 
             // Assert
-            Assert.AreEqual(result, expectedResult);
+            Assert.LessOrEqual(result - expectedResult, precission);
         }
 
         // We are doing some happy patch tests here
@@ -43,7 +44,7 @@ namespace CalculatorTest
             double result = engine.SquareRoot(value1);
 
             // Assert
-            Assert.AreEqual(result, expectedResult);
+            Assert.LessOrEqual(result - expectedResult, precission);
         }
 
         // We are doing some happy patch tests here
@@ -58,7 +59,7 @@ namespace CalculatorTest
             double result = engine.SquareRoot(value1);
 
             // Assert
-            Assert.LessOrEqual(result - expectedResult, 0.000001);
+            Assert.LessOrEqual(result - expectedResult, precission);
         }
 
         // We are doing some happy patch tests here
@@ -73,7 +74,22 @@ namespace CalculatorTest
             double result = engine.SquareRoot(value1);
 
             // Assert
-            Assert.AreEqual(result, expectedResult);
+            Assert.LessOrEqual(result - expectedResult, precission);
+        }
+
+        // We are doing some happy patch tests here
+        [Test]
+        public void SqrtTestOk5()
+        {
+            // Arrange
+            int value1 = 543;
+            double expectedResult = 23.302360395462087179361609805681;
+
+            // Act
+            double result = engine.SquareRoot(value1);
+
+            // Assert
+            Assert.LessOrEqual(result - expectedResult, precission);
         }
 
         // For division, we are doing another test that will throw an exception
@@ -84,7 +100,7 @@ namespace CalculatorTest
             int value1 = -4;
 
             // Act & assert
-            Assert.Throws<Exception>(() => engine.SquareRoot(value1));
+            Assert.Throws<ArgumentException>(() => engine.SquareRoot(value1));
         }
     }
 }

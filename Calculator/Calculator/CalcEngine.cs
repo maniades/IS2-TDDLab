@@ -31,9 +31,31 @@ namespace Calculator
             return (double)value1 / (double)value2;
         }
 
-        public void SquareRoot()
+        public double SquareRoot(int value)
         {
-            throw new NotImplementedException();
+            double result = 0;
+
+            if(value < 0)
+            {
+                throw new ArgumentException("Value must be possitive");
+            }
+
+            double increment = 1;
+
+            while(value - result * result >= 0.00001)
+            {
+                if((result + increment) * (result + increment) > value)
+                {
+                    // make increment less
+                    increment = increment / 10;
+                }
+                else
+                {
+                    result += increment;
+                }
+            }
+
+            return result;
         }
     }
 }
