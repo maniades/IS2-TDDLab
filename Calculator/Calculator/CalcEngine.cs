@@ -21,9 +21,9 @@ namespace Calculator
             return value1 * value2;
         }
 
-        public void Division()
+        public double Division(int value1, int value2)
         {
-            throw new NotImplementedException();
+            return (double)value1 / (double)value2;
         }
 
         public void SquareRoot()

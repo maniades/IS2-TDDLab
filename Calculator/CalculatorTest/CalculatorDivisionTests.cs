@@ -23,11 +23,10 @@ namespace CalculatorTest
             // Arrange
             int value1 = 4;
             int value2 = 2;
-            int expectedResult = 2;
+            double expectedResult = 2;
 
             // Act
-            int result = 0;
-            //int result = engine.Division(value1, value2);
+            double result = engine.Division(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -40,11 +39,10 @@ namespace CalculatorTest
             // Arrange
             int value1 = 0;
             int value2 = 5;
-            int expectedResult = 0;
+            double expectedResult = 0;
 
             // Act
-            int result = -10; // Juat to make to test fail
-            //int result = engine.Division(value1, value2);
+            double result = engine.Division(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -57,11 +55,10 @@ namespace CalculatorTest
             // Arrange
             int value1 = -6;
             int value2 = 2;
-            int expectedResult = -3;
+            double expectedResult = -3;
 
             // Act
-            int result = 0;
-            //int result = engine.Division(value1, value2);
+            double result = engine.Division(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -77,8 +74,7 @@ namespace CalculatorTest
             double expectedResult = 3.5;
 
             // Act
-            double result = 0;
-            //int result = engine.Division(value1, value2);
+            double result = engine.Division(value1, value2);
 
             // Assert
             Assert.AreEqual(result, expectedResult);
@@ -93,7 +89,7 @@ namespace CalculatorTest
             int value2 = 0;
 
             // Act & assert
-            Assert.Throws<DivideByZeroException>(() => engine.Division());
+            Assert.Throws<DivideByZeroException>(() => engine.Division(value1, value2));
         }
     }
 }
