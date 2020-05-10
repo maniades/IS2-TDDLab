@@ -67,6 +67,23 @@ namespace CalculatorTest
             Assert.AreEqual(result, expectedResult);
         }
 
+        // We are doing some happy patch tests here
+        [Test]
+        public void DivisionTestOk4()
+        {
+            // Arrange
+            int value1 = 7;
+            int value2 = 2;
+            double expectedResult = 3.5;
+
+            // Act
+            double result = 0;
+            //int result = engine.Division(value1, value2);
+
+            // Assert
+            Assert.AreEqual(result, expectedResult);
+        }
+
         // For division, we are doing another test that will throw an exception
         [Test]
         public void DivisionException1()
